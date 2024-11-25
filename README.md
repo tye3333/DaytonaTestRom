@@ -33,7 +33,7 @@ This test rom will boot without the IO board connected, usually this results in 
 
 # How to install
 
-Burn the following data to blank 27C1024 eproms:
+For real hardware burn the following data to blank 27C1024 eproms:
 
 roms/
 
@@ -42,6 +42,11 @@ epr-16722a.12
 epr-16723a.13
 
 Place epr-16722a.12 into the socket at IC12 and epr-16723a.13 into IC13 on the rom board. These are PROGRAM 0 & PROGRAM 1.
+
+
+For demonstration purposes within MAME:
+
+Copy the contents of daytona.zip romset into a folder named daytona/ within your usual mame roms/ folder. Copy the test rom files and OVERWRITE the same name files within the daytona/ folder. Rename the romset zip file to something like daytonaORIGINAL.zip to prevent mame from using that. Mame should then proceed to use the test roms within the daytona/ folder, it will however complain about the checksums being wrong. Skip that check, it's fine. Use -debug mode as well if it still complains. Tested with 64bit Mame v0.227 and it works fine.
 
 
 # Future versions
