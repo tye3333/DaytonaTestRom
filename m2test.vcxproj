@@ -146,9 +146,9 @@
     <None Include="kx_init.s" />
     <None Include="lib\testlinkrom.gld" />
     <None Include="lib\testlinkrom.ld" />
+    <None Include="set_env_compile960.bat" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="data.c" />
     <ClCompile Include="geometry.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="matrix.c" />
@@ -158,12 +158,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="copro.h" />
-    <ClInclude Include="data.h" />
     <ClInclude Include="font.h" />
     <ClInclude Include="geometry.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="matrix.h" />
-    <ClInclude Include="palette.h" />
     <ClInclude Include="render.h" />
     <ClInclude Include="serial.h" />
     <ClInclude Include="tests.h" />
