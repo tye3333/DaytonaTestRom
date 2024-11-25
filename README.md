@@ -8,6 +8,11 @@ USE THIS TEST PROGRAM ON YOUR HARDWARE AT YOUR OWN RISK! NO LIABILITY WILL BE AC
 
 Take care when replacing the program eproms!
 
+Tested for use on daytona.zip rom set for MAME, in emulation and on original hardware.
+
+MAME ROM DESCRIPTION: Daytona USA (Japan, Revision A), Original Model 2 w/Model 1 sound board, Sega Game ID# 833-10651 DAYTONA TWIN, ROM board ID# 834-10798
+
+
 
 # Tests
 
@@ -67,6 +72,8 @@ Currently various debug prints are sent to the 8251 serial port used for MIDI me
 Schematic PENDING.
 
 
+# Additional info
 
+The RAM tests were validated by socketting or removing chips on actual hardware.
 
 
