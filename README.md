@@ -12,6 +12,15 @@ Tested for use on daytona.zip rom set for MAME, in emulation and on original har
 
 MAME ROM DESCRIPTION: Daytona USA (Japan, Revision A), Original Model 2 w/Model 1 sound board, Sega Game ID# 833-10651 DAYTONA TWIN, ROM board ID# 834-10798
 
+If your board is still dead with this test rom installed, sorry I cannot help you any further - your board stack may need repair work.
+
+Dead boardset checklist, top five physical tests and observations:
+
+1) Make sure 5 volts is correct at the board level, test the power and GND legs on a TTL chip.
+2) Check all inter board connectors are seated together correctly and no pins are bent.
+3) Check the MB3771 reset generator IC is performing a reset and not holding the CPU in reset, or not providing a reset pulse at all.
+4) Check all the clock oscillator modules are outputting clock pulses.
+5) Check the Work rams (CY7C199 chips at IC12, 13, 14, 15 on the CPU board) are okay, this test rom (currently) will not work if any of those fail.
 
 
 # Tests
