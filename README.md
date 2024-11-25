@@ -36,7 +36,7 @@ epr-16722a.12
 
 epr-16723a.13
 
-Place epr-16722a.12 into the socket at IC12 and epr-16723a.13 into IC13 on the rom board. These are PROGRAM0 & PROGRAM1.
+Place epr-16722a.12 into the socket at IC12 and epr-16723a.13 into IC13 on the rom board. These are PROGRAM 0 & PROGRAM 1.
 
 
 # Future versions
