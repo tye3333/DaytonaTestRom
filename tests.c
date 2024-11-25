@@ -150,20 +150,6 @@ void testRomPal(void)
 	printAt(4, 10, temp);
 }
 
-void testString(void)
-{
-	char temp[64];
-	int i;
-
-	sprintf(temp, "Float: %f   \n \nHEX: %08x  \n \nDEC: %04d\0", fTest, iTest, iTest2);
-
-	fTest += 0.0001f;
-	iTest++;
-	iTest2 += 2;
-
-	printAt(4, 4, temp);
-}
-
 void testDisplayIO(void)
 {
 /*	int xpos = 0; */
@@ -448,9 +434,9 @@ void printICList(void)
 		failFlags = gTestResultList[g_ChipList[i].testIndex].failFlag;
 
 		printColourAt(27, 25 + i, g_ChipList[i].icA, (failFlags & 1) ? 2 : 4);
-		printColourAt(32, 25 + i, g_ChipList[i].icB, (failFlags & 1) ? 2 : 4);
-		printColourAt(37, 25 + i, g_ChipList[i].icC, (failFlags & 1) ? 2 : 4);
-		printColourAt(42, 25 + i, g_ChipList[i].icD, (failFlags & 1) ? 2 : 4);
+		printColourAt(32, 25 + i, g_ChipList[i].icB, (failFlags & 2) ? 2 : 4);
+		printColourAt(37, 25 + i, g_ChipList[i].icC, (failFlags & 4) ? 2 : 4);
+		printColourAt(42, 25 + i, g_ChipList[i].icD, (failFlags & 8) ? 2 : 4);
 	}
 
 }

@@ -16,13 +16,6 @@
 
 char gHeaderText[] = { "DAYTONA TEST ROM V0.2 by STEVE J\0" };
 
-float fTest = 0.4489f;
-int iTest = 0x44899521;
-int iTest2 = 100;
-
-int fuck = 0x44899521;
-int frame = 0;
-
 volatile unsigned int frameVBL = 0;
 unsigned int frameVBLlast = 0;
 
@@ -37,7 +30,6 @@ unsigned int gInputsLast;
 unsigned int gAnalog[8];
 
 char gTemp[256];
-
 
 int main(void)
 {

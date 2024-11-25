@@ -214,10 +214,6 @@ unsigned int gAnalog[8];
 
 extern char gTemp[256];
 
-extern float fTest;
-extern int iTest;
-extern int iTest2;
-
 extern volatile unsigned int frameVBL;
 
 
