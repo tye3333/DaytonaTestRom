@@ -39,30 +39,6 @@ unsigned int gAnalog[8];
 char gTemp[256];
 
 
-#ifdef cocko
-
-extern void main_monitor(void);
-
-
-
-typedef void (*Handler)(void);    /* A pointer to a handler function */
-
-Handler jump_table[4] = { (void*)0x1D50, (void*)0x1D50, (void*)0x1D50, (void*)0x1D50 };
-
-enum
-{
-	eJT_SOUND_OFF,
-	eJT_SOUND_OFF1,
-	eJT_SOUND_OFF2,
-	eJT_SOUND_OFF3,
-};
-
-void main_sound_off(void)
-{
-	jump_table[eJT_SOUND_OFF]();
-}
-#endif
-
 int main(void)
 {
 	/* clear interrupts and disable for now */
