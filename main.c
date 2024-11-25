@@ -14,7 +14,7 @@
 #include "serial.h"
 #include "tests.h"
 
-char gHeaderText[] = { "DAYTONA TEST ROM V0.2 by STEVE J\0" };
+char gHeaderText[] = { "DAYTONA TEST ROM V0.3 by STEVE J\0" };
 
 volatile unsigned int frameVBL = 0;
 unsigned int frameVBLlast = 0;
