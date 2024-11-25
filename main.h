@@ -247,7 +247,7 @@ extern void waitButtonRelease(unsigned int buttonIndex);
 extern void send_data_copro_unknown(void);
 extern void copro_upload_code(void);
 extern void wait_for_copro(void);
-extern void	init_luma_ram(void);
+extern void init_luma_ram(void);
 
 extern void initSerialPort(void);
 extern void sendSerialData(unsigned char txData);
