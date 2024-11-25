@@ -12,7 +12,7 @@
 #include "tests.h"
 
 
-unsigned int initPalette[] =
+unsigned int gInitPalette[] =
 {
 	0x90900000,
 	0x82108200,
@@ -32,13 +32,6 @@ unsigned short gTestPalette[] =
 	SET_RGB(31, 0, 0), SET_RGB(31, 0, 8), SET_RGB(31, 0, 16), SET_RGB(31, 0, 31),
 	SET_RGB(16, 0, 0), SET_RGB(16, 8, 0), SET_RGB(16, 16, 0), SET_RGB(16, 31, 0),
 	SET_RGB(31, 0, 0), SET_RGB(31, 8, 0), SET_RGB(31, 16, 0), SET_RGB(31, 31, 0),
-
-
-
-/*	SET_RGB(0, 0, 0), SET_RGB(0, 0, 31), SET_RGB(31, 0, 0), SET_RGB(31, 0, 31), SET_RGB(0, 31, 0), SET_RGB(0, 31, 31), SET_RGB(31, 31, 0), SET_RGB(31, 31, 31),
-	SET_RGB(0, 0, 0), SET_RGB(0, 0, 24), SET_RGB(24, 0, 0), SET_RGB(24, 0, 31), SET_RGB(0, 24, 0), SET_RGB(0, 24, 24), SET_RGB(24, 24, 0), SET_RGB(24, 24, 24),
-	SET_RGB(0, 0, 0), SET_RGB(0, 0, 16), SET_RGB(16, 0, 0), SET_RGB(16, 0, 16), SET_RGB(0, 16, 0), SET_RGB(0, 16, 16), SET_RGB(16, 16, 0), SET_RGB(16, 16, 16),
-	SET_RGB(0, 0, 0), SET_RGB(0, 0, 8), SET_RGB(8, 0, 0), SET_RGB(8, 0, 8), SET_RGB(0, 8, 0), SET_RGB(0, 8, 8), SET_RGB(8, 8, 0), SET_RGB(8, 8, 8),*/
 };
 
 /* set up text layer for printing */
@@ -166,8 +159,7 @@ void drawTestPageTilemap(void)
 		}
 	}
 
-
-	/* draw gradient */
+	/* draw gradients */
 	for (j = 0; j < 8; j++)
 	{
 		drawTileGradient(4, 4 + (j * 4), j);
@@ -175,9 +167,6 @@ void drawTestPageTilemap(void)
 		drawTileGradient(4, 6 + (j * 4), j);
 	}
 
-	/*	setTextLayerPalette();
-		build_colour_translation();
-	*/
 	printColourAt(1, 1, "COLOUR TEST SCREEN", 0);
 	printColourAt(4, 3, "0", 0);
 	printColourAt(34, 3, "31", 0);
@@ -194,31 +183,23 @@ void drawTestPageTilemap(void)
 	printColourAt(1, 40, "PRESS START TO CONTINUE", 6);
 }
 
-
-
-
-
-
-
-
-
-
-
 /* all black palette to blank screen */
 void setBlackPalette(void)
 {
 	memset((unsigned char *)0x1800000, 0x4000, 0x00);
 }
 
+/* copy car palette */
 void setCarPalette(void)
 {
 	memcpy((unsigned char *)0x1802000, (unsigned char *)0x0284f4ec, 0x7de);
 }
 
+/* copy simple text layer palette */
 void setTextLayerPalette(void)
 {
-	memcpy((unsigned char *)0x1800000, (unsigned char *)initPalette, 0x20);
-	memcpy((unsigned char *)0x1802000, (unsigned char *)initPalette, 0x20);
+	memcpy((unsigned char *)0x1800000, (unsigned char *)gInitPalette, 0x20);
+	memcpy((unsigned char *)0x1802000, (unsigned char *)gInitPalette, 0x20);
 }
 
 /* copy palette from rom data */
@@ -665,7 +646,6 @@ void copyLumaRAM(void)
 		pSource++; pDestBuffer++;
 	}
 }
-
 
 void copyTextureRamMap(int mapIndex)
 {

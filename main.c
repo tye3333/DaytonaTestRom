@@ -7,7 +7,6 @@
 
 #include "main.h"
 #include "copro.h"
-#include "data.h"
 #include "matrix.h"
 #include "geometry.h"
 #include "render.h"

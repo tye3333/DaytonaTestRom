@@ -12,7 +12,6 @@ set G960LLIB=lib
 .\bin\gcc960.exe -S -Ttestlinkrom -AKB -DGNU960 -lcca -lll -O2 -o temp\render.s render.c
 .\bin\gcc960.exe -S -Ttestlinkrom -AKB -DGNU960 -lcca -lll -O2 -o temp\serial.s serial.c
 .\bin\gcc960.exe -S -Ttestlinkrom -AKB -DGNU960 -lcca -lll -O2 -o temp\tests.s tests.c
-.\bin\gcc960.exe -S -Ttestlinkrom -AKB -DGNU960 -lcca -lll -O2 -o temp\data.s data.c
 
 .\bin\gas960.exe temp\main.s -o main.o
 .\bin\gas960.exe temp\geometry.s -o geometry.o
@@ -20,14 +19,13 @@ set G960LLIB=lib
 .\bin\gas960.exe temp\render.s -o render.o
 .\bin\gas960.exe temp\serial.s -o serial.o
 .\bin\gas960.exe temp\tests.s -o tests.o
-.\bin\gas960.exe temp\data.s -o data.o
 
 .\bin\gas960.exe kx_init.s -o kx_init.o
 .\bin\gas960.exe kx_ftbl.s -o kx_ftbl.o
 .\bin\gas960.exe i_table.s -o i_table.o
 .\bin\gas960.exe i_handle.s -o i_handle.o
 
-.\bin\gld960 -o testrom.o -S -AKB -z -m -Ntemp\testrom.map -Ttestlinkrom -lckb -lmkb -lll -c kx_init.o kx_ftbl.o i_table.o i_handle.o geometry.o matrix.o render.o serial.o tests.o data.o main.o
+.\bin\gld960 -o testrom.o -S -AKB -z -m -Ntemp\testrom.map -Ttestlinkrom -lckb -lmkb -lll -c kx_init.o kx_ftbl.o i_table.o i_handle.o geometry.o matrix.o render.o serial.o tests.o main.o
 
 .\bin\grom960.exe -i -l 0x200000 -o roms\testrom.bin testrom.o
 
