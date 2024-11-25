@@ -31,6 +31,7 @@ This test rom will boot without the IO board connected, usually this results in 
 Burn the following data to blank 27C1024 eproms:
 
 roms/
+
 epr-16722a.12
 
 epr-16723a.13
