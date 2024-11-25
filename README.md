@@ -72,7 +72,8 @@ Functionality to add:
 8) Add memory test to CPU work ram before any stack use occurs, make the screen blink red for failure indication.
 9) Add tests for texture memory to help indicate failed texture ram.
 10) Make this test program work on other model 2 hardware (2A, 2B & 2C), currently only Daytona USA is supported.
-11) BUG: Sometimes COMMS ram fails in MAME? Unknown why as the compare seems to hold the correct values.
+11) Add geo buffer ram chips to bus identification list.
+12) BUG: Sometimes COMMS ram fails in MAME? Unknown why as the compare seems to hold the correct values.
 
 
 # Compiling
