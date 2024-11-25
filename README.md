@@ -58,7 +58,6 @@ Functionality to add:
 8) Add memory test to CPU work ram before any stack use occurs, make the screen blink red for failure indication.
 9) Add tests for texture memory to help indicate failed texture ram.
 10) Make this test program work on other model 2 hardware (2A, 2B & 2C), currently only Daytona USA is supported.
-11) Memory tests currently do not pinpoint exact chip within data bus (16 and 32 bit wide), just which type of ram has failed.
 
 
 # Compiling
