@@ -146,7 +146,6 @@
     <None Include="kx_init.s" />
     <None Include="lib\testlinkrom.gld" />
     <None Include="lib\testlinkrom.ld" />
-    <None Include="set_env_compile960.bat" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="geometry.c" />
