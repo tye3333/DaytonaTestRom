@@ -57,7 +57,7 @@ Functionality to add:
 
 # Compiling
 
-Copy files to a directory anywhere on a Windows PC, run compile_TESTROM.bat and the included i960 compiler should build a new set of eproms. Tested on Windows 11 okay.
+Test program is coded in C, source code and i960 GCC compiler is included. Copy files to a directory anywhere on a Windows PC, run compile_TESTROM.bat and the i960 compiler should build a new set of eproms. Tested on Windows 11 okay.
 
 
 # Debug port
